@@ -1,0 +1,29 @@
+.App {
+  text-align: center;
+  background: black;
+  color: green;
+}
+
+.App-header {
+  height: 140px;
+  padding: 20px;
+  color: green;
+  font-family: 'Source Code Pro', monospace;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.loading {
+  width: 100%;
+  margin: 5% auto;
+  opacity: 0.5;
+  width: 50%;
+  border-radius: 50%;
+  box-shadow: 0 0 200px 200px #212121 inset;
+}
+#cv {
+  height: 80px;
+  margin: 5px;
+}

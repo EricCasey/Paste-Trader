@@ -1,0 +1,13 @@
+.aboutContainer {
+  background: #212121;
+  color: green;
+  height: 700px;
+}
+
+#content {
+  width: 70%;
+  margin: 0 auto;
+  border: 1px solid black;
+  height: 600px;
+  text-align: center;
+}

@@ -1,0 +1,27 @@
+.dropdown {
+  width: 78%;
+  height: 700px;
+  margin: 5px auto;
+  border: 3px solid green;
+  overflow: hidden;
+  background: #212121;
+  /*position: relative;*/
+  border-radius: 5px;
+}
+h3 {
+  text-align: center;
+  margin-top: 10px;
+}
+.remove {
+  float: right;
+  margin-right: 4px;
+}
+.toggle {
+  float: left;
+  margin-left: 4px;
+}
+.logo {
+  width: 30%;
+  text-align: center;
+  margin: 20px;
+}

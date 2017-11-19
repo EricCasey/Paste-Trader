@@ -1,0 +1,38 @@
+Poloniex Digital Asset Exchange
+EXCHANGE	MARGIN TRADING	LENDING
+BALANCES 	ORDERS
+BALANCES, DEPOSITS & WITHDRAWALS
+Estimated value of holdings: $598.94 USD / 0.13918385 BTC
+$2,000.00 remaining of $2,000.00 USD daily limit.
+Hide 0 Balances Hide Delisted
+
+Coin
+Name
+Total Balance
+On Orders
+BTC Value
+Actions
+BTC	Bitcoin	0.03364489	0.00000000	0.03364489	Deposit Withdraw
+RIC	Riecoin	102.38269794	0.00000000	0.00137909	Deposit Withdraw
+NXT	NXT	68.74354561	0.00000000	0.00119957	Deposit Withdraw
+BURST	Burst	446.34900285	0.00000000	0.00092394	Deposit Withdraw
+Table data filtered. Clear filters.
+Looking for your Deposit & Withdrawal History?
+
+ABOUT POLONIEX
+Contact Us
+Fees
+Privacy Policy
+Terms of Use
+SUPPORT
+Contact Support
+Support Resources
+Switch to Mobile Site
+NEWS
+Press Releases
+Twitter
+Poloniex Digital Asset Exchange
+Server time: 2017-10-01 16:27 UTC
+Users currently online: 18783
+24hr Volume: 12770 BTC / 3149 ETH / 304 XMR / 27678913 USDT
+© Poloniex, Inc. 2017 - Wilmington, DE, USA

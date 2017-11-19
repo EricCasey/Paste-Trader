@@ -1,0 +1,34 @@
+.exBar {
+  text-align: center;
+  margin: 0 auto;
+  background: black;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row; /* works with row or column */
+  flex-direction: row;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-top: 3px solid green;
+  border-bottom: 3px solid green;
+  height: 2px;
+  font-family: 'Source Code Pro', monospace;
+  height: 25px;
+}
+.exItem {
+  width: 150px;
+  margin: 0 0 0 0;
+  color: green;
+  height: 100%;
+ }
+
+.exItem:hover {
+  color: white;
+  background: green;
+}
+
+.selected {
+  background: green;
+  color: white;
+}

@@ -1,0 +1,39 @@
+.NavBar {
+  text-align: center;
+  margin: 0 auto;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row; /* works with row or column */
+  flex-direction: row;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  background: #212121;
+  border-top: 3px solid green;
+  border-bottom: 3px solid green;
+  height: 45px;
+  font-family: 'Source Code Pro', monospace;
+}
+.menuItem {
+  width: 150px;
+  margin: 0 0 0 0;
+  color: white;
+  height: 100%;
+  padding-top: 9px;
+  border-radius: 5px;
+   /*position: fixed;
+   margin: 0 auto;*/
+ }
+
+.menuItem:hover {
+  color: white;
+  background: green;
+  border-radius: 3px;
+}
+
+.selected {
+  background: white;
+  color: red;
+  opacity: 0.5;
+}

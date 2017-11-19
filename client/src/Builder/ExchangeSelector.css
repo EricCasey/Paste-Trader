@@ -1,0 +1,34 @@
+.ExchangeSelector {
+  background: #212121;
+  float: left;
+  width: 100%;
+  height: 400px;
+  color: green;
+  font-family: 'Source Code Pro', monospace;
+  border: 3px solid green;
+  border-radius: 5px;
+  padding: 5px;
+  margin-top: 5px;
+}
+.selectable {
+  border: 1px solid black;
+  padding: 2px;
+  border-radius: 5px;
+  width: 100%;
+  margin: 3px auto;
+}
+h4 {
+  width: 100%;
+}
+.shortlist {
+  text-align: center;
+  margin-top: 10px;
+}
+.short {
+  color: green;
+  border: 2px solid lightgreen;
+  padding: 2px;
+  margin: 3px auto;
+  width: 90%;
+  border-radius: 3px;
+}

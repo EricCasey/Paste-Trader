@@ -1,0 +1,44 @@
+#optionsContainer {
+  color: black;
+  float: right;
+  height: 80px;
+  width: 60%;
+  padding: 3px;
+  position: absolute;
+  z-index: 100;
+  background: #212121;
+}
+#options {
+  height: 100%;
+  font-family: 'Source Code Pro', monospace;
+}
+h3 {
+  margin: 5px auto 5px auto;
+}
+option {
+  color: black;
+}
+input {
+  width: 100%;
+  border-radius: 2px;
+}
+button {
+  border: red;
+}
+.comboSelect {
+  border: violet;
+}
+#AC1, #AC2 {
+  width: 100%;
+  /*margin: 0 auto;*/
+}
+button {
+  /*margin: 3px;*/
+  border-radius: 3px;
+}
+p {
+  margin-bottom: 0px;
+  line-height: 1em;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+}

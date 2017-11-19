@@ -1,0 +1,111 @@
+.inputView {
+  color: black;
+  margin-bottom: 0px;
+}
+textarea {
+  width: 15%;
+  height: 40px;
+  margin: 3px 5px;
+  background: #212121;
+  color: green;
+  border: 3px solid green;
+  border-radius: 5px;
+  resize: none;
+  overflow: hidden;
+  text-align: center;
+}
+
+.areas {
+  border: 4px soild black;
+  padding: 10px 0 10px 0;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row; /* works with row or column */
+  flex-direction: row;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.input {
+  margin: 0 auto;
+}
+.investment {
+  width: 100px;
+  margin: 0 auto;
+  margin: 2px 2px 2px 5px;
+  background: #212121;
+  color: green;
+  border: 3px solid green;
+  border-radius: 5px;
+  resize: none;
+  overflow:hidden;
+}
+.instructions {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row; /* works with row or column */
+  flex-direction: row;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.guide {
+  width: 49%;
+}
+.locked {
+  width: 50%;
+  margin-top: 40px;
+}
+.lock {
+  width: 30px;
+  margin-top: 2px;
+}
+.lock:hover {
+
+}
+.locked:hover {
+  opacity: 0.5;
+}
+.invalid {
+  width: 15%;
+  height: 40px;
+  margin: 0 auto;
+  background: red;
+  color: white;
+  border: 3px solid red;
+  border-radius: 5px;
+  resize: none;
+  overflow: hidden;
+  font-size: 10px;
+}
+
+.middle {
+  text-align: center;
+}
+.visBTN {
+  position: relative;
+  margin: 2px 2px 2px 5px;
+  padding: 1px;
+  float: left;
+  color: red;
+  border: 2px solid red;
+}
+
+.visBTN:hover {
+  color: green;
+  border: 2px solid green;
+}
+
+.success {
+  width: 15%;
+  height: 40px;
+  margin: 0 auto;
+  background: #212121;
+  color: green;
+  border: 3px solid green;
+  border-radius: 5px;
+  resize: none;
+  overflow: hidden;
+}
