@@ -14,7 +14,7 @@ function generateProfiles(trades, units) {
     // console.log(trades.length + " trades!")
   trades.map((trade, index) => {
 
-    console.log(trade)
+    // console.log(trade)
     var change = 0,
         btcChange = 0,
         valueObject = {},

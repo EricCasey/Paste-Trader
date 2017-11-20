@@ -1,4 +1,43 @@
 .Stacked {
   width: 100%;
-  height: 400px;
+  height: 300px;
+}
+
+.stackedOptions {
+  width: 100%;
+  margin: 0 auto;
+  height: 40px;
+  color: lightgreen;
+  background: black;
+  border: 1px solid red;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row; /* works with row or column */
+  flex-direction: row;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.stackedOption {
+  width: 30%;
+  margin: 0px;
+}
+.form {
+ width: 100%;
+ display: -webkit-flex;
+ display: flex;
+ -webkit-flex-direction: row; /* works with row or column */
+ flex-direction: row;
+ -webkit-align-items: center;
+ align-items: center;
+ -webkit-justify-content: center;
+ justify-content: center;
+}
+input {
+  width: 30px;
+}
+p {
+
 }

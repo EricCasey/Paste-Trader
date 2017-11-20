@@ -21,11 +21,11 @@ class Card extends Component {
     var logoArea = <h3>{this.props.exchange}</h3>
     if (this.props.exchange === "Poloniex") {
       logoArea = <div>
-        <img className="logo" src={PoloniexLogo}/>
+        <img className="logo" src={PoloniexLogo} role="presentation"/>
       </div>
     } else if (this.props.exchange === "BitTrex") {
       logoArea = <div>
-        <img className="logo" src={BittrexLogo}/>
+        <img className="logo" src={BittrexLogo} role="presentation"/>
       </div>
     }
 
@@ -40,7 +40,13 @@ class Card extends Component {
 
         {logoArea}
 
-        <Inputs exchange={this.props.exchange} submitQuery={this.props.submitQuery} conversionData={this.props.conversionData} visData={this.props.visData} raiseTrades={this.props.raiseTrades}/>
+        <Inputs
+          exchange={this.props.exchange}
+          submitQuery={this.props.submitQuery}
+          conversionData={this.props.conversionData}
+          histVisData={this.props.histVisData}
+          pieVisData={this.props.pieVisData}
+          raiseTrades={this.props.raiseTrades}/>
       </div>
     )
   }

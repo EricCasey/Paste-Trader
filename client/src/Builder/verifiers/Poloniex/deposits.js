@@ -1,4 +1,4 @@
-import timestamp from 'time-stamp';
+// import timestamp from 'time-stamp';
 
 function generateDeposits(e) {
 

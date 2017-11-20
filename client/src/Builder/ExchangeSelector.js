@@ -27,8 +27,7 @@ class ExchangeSelector extends Component {
     // console.log(selected)
     return (
       <div className="ExchangeSelector">
-        <h4>Search {this.props.exchangeList.length}
-          Exchanges</h4>
+        <h4>Choose From {this.props.exchangeList.length} Exchanges</h4>
         <Autocomplete id="AC-exchanges" items={this.props.exchangeList} selectOnBlur={true} shouldItemRender={(item, value) => item.toLowerCase().indexOf(value.toLowerCase()) > -1} getItemValue={(item) => item} renderItem={(item, isHighlighted) => <div style={{
           background: isHighlighted
             ? 'lightgray'

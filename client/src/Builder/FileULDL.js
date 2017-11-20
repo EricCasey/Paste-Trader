@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import './FileULDL.css';
 
-import fs from 'fs';
+// import fs from 'fs';
 import FileSaver from 'filesaver.js';
 
 class FileULDL extends Component {
@@ -9,19 +9,22 @@ class FileULDL extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      exportable: false,
+      exportable: true,
       importable: true
     }
+    this.exportHandler = this.exportHandler.bind(this);
   };
 
+  ComponentWillReceiveProps() {
+    this.setState({
+      visData: this.props.visExport
+    })
+  }
+
   exportHandler() {
-
-    console.log("export requested")
-
-    var blob = new Blob([ { 'foo' : 'bar' } ], {type: "text/plain;charset=utf-8"});
-
+    var data = JSON.stringify(this.props.visExport);
+    var blob = new Blob([ data ], {type: "text/plain;charset=utf-8"});
     FileSaver.saveAs(blob, "portfolio.txt");
-
   }
 
   importHandler() {
@@ -30,7 +33,7 @@ class FileULDL extends Component {
 
   render() {
     var portfolioImport,
-      portfolioExport;
+        portfolioExport
 
     if (this.state.importable === true) {
       portfolioImport = <div className="file">

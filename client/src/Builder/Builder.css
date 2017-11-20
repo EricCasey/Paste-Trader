@@ -29,9 +29,24 @@ h3 {
   margin-left: 4px;
 }
 .inputOptions {
-  width: 20%;
-  height: 100%;
+  width: 100%;
+  height: 150px;
   margin: 0;
   margin-right: 0px;
-  float: left;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row; /* works with row or column */
+  flex-direction: row;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border: 3px solid lightgreen;
+  background: #212121;
+}
+.choices {
+  padding-top: 30px;
+  width: 70%;
+  height: 400px;
+  margin: 30px auto;
 }

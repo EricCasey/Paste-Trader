@@ -3,7 +3,6 @@ import React, {Component} from "react";
 import './Builder.css';
 import './Inputs.css';
 
-import Inputs from './Inputs'
 import ExchangeSelector from './ExchangeSelector'
 import Card from './Card'
 import FileULDL from './FileULDL'
@@ -13,8 +12,8 @@ class Builder extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      selectedExList: [ "Poloniex", "BitTrex" ],
-      idArray: []
+      selectedExList: [ "Poloniex" ],
+      idArray: [ ]
     }
     this.selectExchange = this.selectExchange.bind(this);
     this.handleRemove = this.handleRemove.bind(this);
@@ -41,8 +40,9 @@ class Builder extends Component {
     var view;
     if (this.state.selectedExList.length === 0) {
       view = <div className="choices">
-        <div>Select Exchanges from the right</div>
-        <div>or Import your portfolio</div>
+        <h3>Select Exchanges from the right</h3>
+        <h3>or Import your portfolio</h3>
+        <h3>HOW IT WORKS</h3>
       </div>
     } else {
       view = this.state.selectedExList.map((exchange, index) => {
@@ -52,7 +52,8 @@ class Builder extends Component {
           key={index}
           submitQuery={this.props.submitQuery}
           conversionData={this.props.conversionData}
-          visData={this.props.visData}
+          histVisData={this.props.histVisData}
+          pieVisData={this.props.pieVisData}
           raiseTrades={this.props.raiseTrades}
           raiseDeposits={this.props.raiseDeposits}
           />
@@ -62,7 +63,9 @@ class Builder extends Component {
     return (
       <div className="BuilderView">
         <div className="inputOptions">
-          <FileULDL />
+          <FileULDL
+            visExport={this.props.histVisData}
+            />
           <ExchangeSelector
             exchangeList={this.props.exchangeList}
             selectExchange={this.selectExchange}
@@ -71,8 +74,8 @@ class Builder extends Component {
             />
         </div>
 
-
         {view}
+
       </div>
     );
   }

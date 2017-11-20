@@ -1,8 +1,10 @@
 import React, {Component} from "react";
 import './Inputs.css';
-import Stacked from './Stacked';
 import ExNav from './exNav'
 import timestamp from 'time-stamp';
+
+import Stacked from './Stacked';
+import Pie from './Pie';
 
 import verifyPortfolio from './verifiers/Poloniex/portfolio';
 import verifyHistory from './verifiers/Poloniex/history';
@@ -126,13 +128,11 @@ class Inputs extends Component {
 
         // console.log(c1,c2,ex,type,queryUnits,agr,typeQ)
 
-        this.setState({dataView: 'stacked'})
-
         this.props.submitQuery(c1, c2, ex, type, queryUnits, agr, typeQ)
 
       }
     })
-
+    this.setState({dataView: 'stacked'})
   }
 
   onUSDChange(e) {
@@ -164,7 +164,6 @@ class Inputs extends Component {
   }
 
   render() {
-    console.log(this.state)
     if (this.props.conversionData === 'empty') {
     } else {
       this.visualize
@@ -175,11 +174,21 @@ class Inputs extends Component {
     if (this.state.dataView === 'locked') {
       dataView = <div className=""><img className="locked" src="http://diego.org/wp-content/uploads/2015/08/icon-512@x.png"/></div>
     } else if (this.state.dataView === 'stacked') {
-      dataView = <Stacked exchange={this.props.exchange} coins={this.state.coins} dataPayload={this.state.dataPayload} visData={this.props.visData} investment={this.state.investment}/>
+      dataView = <Stacked
+        exchange={this.props.exchange}
+        coins={this.state.coins}
+        dataPayload={this.state.dataPayload}
+        histVisData={this.props.histVisData}
+        investment={this.state.investment}/>
     } else if (this.state.dataView === 'pie') {
-      dataView = <div>Pre Chart Here</div>
-    } else if (this.state.dataView === 'overview') {
-      dataView = <div>Overview here</div>
+      dataView = <Pie
+        exchange={this.props.exchange}
+        coins={this.state.coins}
+        dataPayload={this.state.dataPayload}
+        pieVisData={this.props.pieVisData}
+        investment={this.state.investment}/>
+    } else if (this.state.dataView === 'profit table') {
+      dataView = <div>btc excel table here (exportable)</div>
     } else if (this.state.dataView === 'english') {
       dataView = <div>plain english here</div>
     } else {

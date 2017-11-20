@@ -31,10 +31,10 @@ class exNav extends Component {
   render() {
     return (
       <div className="exBar">
-        <div className={this.classChecker("stacked")} onClick={this.menuClick} id="stacked">Stacked Chart</div>
+        <div className={this.classChecker("stacked")} onClick={this.menuClick} id="stacked">Historical Chart</div>
         <div className={this.classChecker("pie")} onClick={this.menuClick} id="pie">Pie Chart</div>
-        <div className={this.classChecker("overview")} onClick={this.menuClick} id="overview">Overview</div>
-        <div className={this.classChecker("english")} onClick={this.menuClick} id="english">English</div>
+        <div className={this.classChecker("overview")} onClick={this.menuClick} id="table">P/L Table</div>
+        <div className={this.classChecker("english")} onClick={this.menuClick} id="english">Plain English</div>
       </div>
     );
   }

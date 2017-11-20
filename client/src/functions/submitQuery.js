@@ -97,7 +97,8 @@ function submitQuery(c1, c2, ex, type, units, agr, typeQ) {
       // console.log(history)
       var usdbtcLine = [],
           btcLine = this.state.btcLine,
-          oldVisData = this.state.visData
+          oldPieVisData = this.state.pieVisData,
+          oldHistVisData = this.state.histVisData
 
       btcLine.map((amount, i) => {
         // console.log(history[1][i])
@@ -119,7 +120,15 @@ function submitQuery(c1, c2, ex, type, units, agr, typeQ) {
           lowHistory: history[4],
           timeHistory: history[0]
         },
-        visData: oldVisData.concat({
+        histVisData: oldHistVisData.concat({
+          'x': history[0],
+          'y': usdbtcLine,
+          'name': "BTC",
+          'line': {
+            'shape': 'hv'
+          }
+        }),
+        pieVisData: oldPieVisData.concat({
           'x': history[0],
           'y': usdbtcLine,
           'name': "BTC",
@@ -128,11 +137,6 @@ function submitQuery(c1, c2, ex, type, units, agr, typeQ) {
           }
         })
       })
-
-
-
-
-
 
 
     } else if (typeQ === "vis") {
@@ -197,18 +201,25 @@ function submitQuery(c1, c2, ex, type, units, agr, typeQ) {
         //console.log("coinAmountValues" + c1)
         //console.log(coinAmountValues)
 
-        var oldVisData = this.state.visData
+        var oldHistVisData = this.state.histVisData,
+            oldPieVisData = this.state.pieVisData;
         this.setState({
-          visData: oldVisData.concat({
+          histVisData: oldHistVisData.concat({
             'x': coinDates,
             'y': coinUSDValues,
             'name': c1,
             'line': {
               'shape': 'spline'
             }
+          }),
+          pieVisData: oldPieVisData.concat({
+            'x': coinDates,
+            'y': coinUSDValues,
+            'name': c1
           })
         })
-
+        console.log("printing pie data")
+        console.log(this.state.pieVisData)
       } else if (typeQ === "base") {
 // this is where the BTC magic happens for the visualization
 

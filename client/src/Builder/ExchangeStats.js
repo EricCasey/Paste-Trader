@@ -37,7 +37,8 @@ class ExchangeStats extends Component {
 
           <div className="portfolioStats statBox">
             <p className="stat">{this.props.state.portfolio.length} Coins</p>
-            <p className="stat">{this.props.state.portfolio.length-1} Alt Coins</p>
+            <p className="stat">{this.props.state.portfolio.length-1} AltCoins</p>
+            <p className="stat">X Coin Mix</p>
           </div>
 
           <div className="tradeStats statBox">

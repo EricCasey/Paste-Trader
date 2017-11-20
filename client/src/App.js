@@ -8,7 +8,7 @@ import Builder from './Builder/Builder.js';
 import About from './About.js';
 import How from './How.js';
 
-import octoLogo from './images/octologo.png'
+import ptlogo from './images/ptlogo2.png';
 
 import getExchanges from './functions/getExchanges';
 import getCoinList from './functions/getCoinList';
@@ -34,6 +34,8 @@ class App extends Component {
       exchangePair: [],
       conversionData: 'empty',
       visData: [],
+      pieVisData: [],
+      histVisData: [],
       basicExchangeTitle: '',
       usdbtcLine: []
     }
@@ -70,20 +72,46 @@ class App extends Component {
     console.log(this.state)
     var view = ''
     if (this.state.currentView === 'base') {
-      view = <BaseChart priceData={this.state.priceData} currentPrice={this.state.currentPrice} firstPrice={this.state.firstPrice} firstDate={this.state.firstDate} count={this.state.count} highestPrice={this.state.highestPrice} lowestPrice={this.state.lowestPrice} exchanges={this.state.exchanges} coinList={this.state.coinList} getCoin2={this.getCoin2} pairList={this.state.availPairs} exchangePair={this.state.exchangePair} submitQuery={this.submitQuery} openHistory={this.state.openHistory} closeHistory={this.state.closeHistory} highHistory={this.state.highHistory} lowHistory={this.state.lowHistory} timeHistory={this.state.timeHistory} basicExchangeTitle={this.state.basicExchangeTitle}/>
+      view = <BaseChart
+        priceData={this.state.priceData}
+        currentPrice={this.state.currentPrice}
+        firstPrice={this.state.firstPrice}
+        firstDate={this.state.firstDate}
+        count={this.state.count}
+        highestPrice={this.state.highestPrice}
+        lowestPrice={this.state.lowestPrice}
+        exchanges={this.state.exchanges}
+        coinList={this.state.coinList}
+        getCoin2={this.getCoin2}
+        pairList={this.state.availPairs}
+        exchangePair={this.state.exchangePair}
+        submitQuery={this.submitQuery}
+        openHistory={this.state.openHistory}
+        closeHistory={this.state.closeHistory}
+        highHistory={this.state.highHistory}
+        lowHistory={this.state.lowHistory}
+        timeHistory={this.state.timeHistory}
+        basicExchangeTitle={this.state.basicExchangeTitle}/>
     } else if (this.state.currentView === 'inputs') {
-      view = <Builder exchangeList={this.state.exchanges} submitQuery={this.submitQuery} conversionData={this.state.conversionData} visData={this.state.visData} raiseTrades={this.raiseTrades} raiseDeposits={this.raiseDeposits}/>
+      view = <Builder
+        exchangeList={this.state.exchanges}
+        submitQuery={this.submitQuery}
+        conversionData={this.state.conversionData}
+        histVisData={this.state.histVisData}
+        pieVisData={this.state.pieVisData}
+        raiseTrades={this.raiseTrades}
+        raiseDeposits={this.raiseDeposits}/>
     } else if (this.state.currentView === 'how') {
       view = <How />
     } else if (this.state.currentView === 'about') {
       view = <About />
     } else if (this.state.currentView === 'ticker') {
-      view = <div>live ticker goes here</div>
+      view = <div>real-time here</div>
     }
     return (
       <div className="App">
         <div className="App-header">
-          <img id="cv" src={octoLogo}/>
+          <img id="cv" src={ptlogo} role="presentation"/>
           <p>The no-login, no-database, cookie-less, ad-less, worry-free cryptocurrency portfolio manager.</p>
         </div>
 
